@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="files/Screenshot 2025-09-07 144432.png" />
+    <link rel="stylesheet" href="css/animation-utilities-extended.css">
+    <link rel="shortcut icon" href="files/download.png" type="image/x-icon">
+    <title>Dawood Butt - Creative Frontend Developer</title>
+    <meta name="description"
+        content="Dawood Butt - Creative Frontend Developer from Lahore, Pakistan. Building modern web experiences with HTML, CSS, Tailwind, JavaScript, and React.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#3B82F6',
+                        'secondary': '#8B5CF6',
+                        'accent': '#F59E0B',
+                        'dark': '#1F2937',
+                        'darker': '#111827',
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'gradient': 'gradient 15s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter bg-white text-gray-900 overflow-x-hidden ">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-lg transition-all duration-300"
+        id="navbar">
+        <div class="container mx-auto px-6 py-4 scroll-reveal">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="text-2xl font-bold font-poppins">
+                    <span class="text-primary">Dawood</span>
+                    <span class="text-secondary">Butt</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home"
+                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
+                    </li>
+                    <li><a href="#about"
+                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">About</a>
+                    </li>
+                    <li><a href="#skills"
+                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Skills</a>
+                    </li>
+                    <li><a href="#projects"
+                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Projects</a>
+                    </li>
+                    <li><a href="#experience"
+                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Experience</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 hover:text-primary focus:outline-none" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden mt-4 hidden" id="mobile-menu">
+                <ul class="space-y-4">
+                    <li><a href="#home"
+                            class="block text-gray-700 hover:text-primary transition-colors duration-300">Home</a></li>
+                    <li><a href="#about"
+                            class="block text-gray-700 hover:text-primary transition-colors duration-300">About</a></li>
+                    <li><a href="#skills"
+                            class="block text-gray-700 hover:text-primary transition-colors duration-300">Skills</a>
+                    </li>
+                    <li><a href="#projects"
+                            class="block text-gray-700 hover:text-primary transition-colors duration-300">Projects</a>
+                    </li>
+                    <li><a href="#experience"
+                            class="block text-gray-700 hover:text-primary transition-colors duration-300">Experience</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="block text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 scroll-reveal">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full animate-pulse-slow"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/10 rounded-full animate-bounce-slow"></div>
+            <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/5 rounded-full animate-float">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold font-poppins mb-6">
+                    <span class="text-gray-800">I'm</span>
+                    <span
+                        class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-gradient">
+                        Dawood Butt
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Creative Frontend Developer | Building Modern Web Experiences
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="files/Dawood Butt.pdf"
+                        class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-eye mr-2"></i>
+                        Download My Resume
+                    </a>
+                    <a href="#contact"
+                        class="btn-secondary inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce scroll-reveal">
+                <a href="#about" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 scroll-reveal">
+                    About <span class="text-primary scroll-reveal">Me</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 scroll-reveal">
+                        Hello! I'm Dawood Butt
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed scroll-reveal">
+                        I'm an 18-year-old passionate Frontend Developer from Lahore, Pakistan, currently in my 2nd year
+                        of studies.
+                        I love creating modern, responsive web experiences that combine beautiful design with seamless
+                        functionality.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed scroll-reveal">
+                        With a strong foundation in HTML, CSS, Tailwind CSS, and JavaScript, I'm constantly learning and
+                        exploring
+                        new technologies. Currently diving deep into React to expand my frontend development skills.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed scroll-reveal">
+                        I also have 1 year of freelancing experience as a Canva designer, which has sharpened my eye for
+                        design
+                        and helped me understand the importance of user experience in digital products.
+                    </p>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-2 gap-6 mt-8 scroll-reveal">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg scroll-reveal">
+                            <h4 class="text-2xl font-bold text-primary scroll-reveal">1+</h4>
+                            <p class="text-gray-600 scroll-reveal">Years Experience</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg scroll-reveal">
+                            <h4 class="text-2xl font-bold text-secondary scroll-reveal">10+</h4>
+                            <p class="text-gray-600 scroll-reveal">Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <!-- Profile Image Placeholder -->
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-2xl overflow-hidden"
+                        scroll-reveal>
+                        <img src="files/InShot_20250412_20035992.jpg" alt="profile"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <!-- Floating Elements -->
+                    <div
+                        class="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-full flex items-center justify-center animate-float shadow-lg scroll-reveal">
+                        <i class="fab fa-js-square text-white text-xl"></i>
+                    </div>
+                    <div
+                        class="absolute -bottom-4 -left-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center animate-bounce-slow shadow-lg scroll-reveal">
+                        <i class="fab fa-react text-white text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 ">
+        <div class="container mx-auto px-6 scroll-reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 scroll-reveal">
+                    My <span class="text-primary scroll-reveal">Skills</span>
+                </h2>
+                <div
+                    class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4 scroll-reveal">
+                </div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto scroll-reveal">
+                    Here are the technologies and tools I use to bring ideas to life
+                </p>
+            </div>
+
+            <!-- Frontend Skills -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center scroll-reveal">Frontend Development
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fab fa-html5 text-4xl text-orange-500 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">HTML5</h4>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">CSS3</h4>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fas fa-wind text-4xl text-cyan-500 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">Tailwind CSS</h4>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fab fa-js-square text-4xl text-yellow-500 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">JavaScript</h4>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fab fa-react text-4xl text-cyan-400 mb-4"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">React <span
+                                class="text-sm text-gray-500 scroll-reveal">(Learning)</span></h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center scroll-reveal">Tools & Platforms</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fas fa-palette text-4xl text-purple-500 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">Canva</h4>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fab fa-github text-4xl text-gray-800 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">GitHub</h4>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fas fa-code text-4xl text-blue-600 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">VS Code</h4>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fas fa-mobile-alt text-4xl text-green-500 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 scroll-reveal">Responsive Design</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center scroll-reveal">Soft Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fas fa-lightbulb text-4xl text-accent mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 mb-2 scroll-reveal">Problem Solving</h4>
+                        <p class="text-gray-600 text-sm scroll-reveal">Breaking down complex problems into manageable
+                            solutions</p>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fas fa-paint-brush text-4xl text-pink-500 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 mb-2 scroll-reveal">Creativity</h4>
+                        <p class="text-gray-600 text-sm scroll-reveal">Designing unique and engaging user experiences
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center scroll-reveal">
+                        <i class="fas fa-comments text-4xl text-green-500 mb-4 scroll-reveal"></i>
+                        <h4 class="font-semibold text-gray-800 mb-2 scroll-reveal">Communication</h4>
+                        <p class="text-gray-600 text-sm scroll-reveal">Clear communication with clients and team members
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6 scroll-reveal">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 scroll-reveal">
+                    My <span class="text-primary scroll-reveal">Projects</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto scroll-reveal">
+                    Here are some of my recent projects that showcase my skills and creativity
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+                <!-- Project 1: Portfolio Website -->
+                <div
+                    class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden scroll-reveal">
+                    <div
+                        class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center scroll-reveal">
+                        <!-- <i class="fas fa-user-circle text-6xl text-white/80 scroll-reveal"></i> -->
+                        <img src="files/Screenshot 2025-09-06 202218.png" alt=""
+                            class="fas fa-user-circle text-6xl text-white/80 scroll-reveal">
+                    </div>
+                    <div class="p-6 scroll-reveal">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 scroll-reveal">Portfolio Website</h3>
+                        <p class="text-gray-600 mb-4 scroll-reveal">
+                            A modern, fully responsive portfolio website built with HTML, Tailwind CSS, and JavaScript.
+                            Features smooth animations and clean UI design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 scroll-reveal">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm scroll-reveal">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm scroll-reveal">Tailwind
+                                CSS</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm scroll-reveal">JavaScript</span>
+                        </div>
+                        <a href="https://dawoodfrontenddeveloper.netlify.app/"
+                            class="inline-flex items-center text-primary hover:text-blue-600 transition-colors duration-300 scroll-reveal cursor-pointer z-50 "
+                            target="_blank">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            View Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Web Replica  -->
+                <div
+                    class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden scroll-reveal">
+                    <div
+                        class="h-48 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center scroll-reveal">
+                        <img src="files/Screenshot 2025-09-02 161430.png" alt=""
+                            class="fas fa-cloud-sun text-6xl text-white/80 scroll-reveal">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 scroll-reveal">Web Replica</h3>
+                        <p class="text-gray-600 mb-4 scroll-reveal">
+                            A modern, fully responsive website replica built with HTML, Tailwind CSS, and JavaScript.
+                            Features smooth animations and clean UI design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 scroll-reveal">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm scroll-reveal">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm scroll-reveal">CSS</span>
+                            <!-- <span
+                            class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm scroll-reveal">JavaScript</span>
+                            <span
+                            class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm scroll-reveal">Tailwind</span> -->
+                        </div>
+                        <a href="https://dawood-project.netlify.app/"
+                            class="inline-flex items-center text-primary hover:text-blue-600 transition-colors duration-300 scroll-reveal"
+                            target="_blank">
+                            <i class="fas fa-external-link-alt mr-2 scroll-reveal"></i>
+                            View Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: calculator  -->
+                <div
+                    class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden scroll-reveal">
+                    <div
+                        class="h-48 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center scroll-reveal">
+                        <img src="files/Screenshot 2025-09-02 165606.png" alt=""
+                            class="fas fa-cloud-sun text-6xl text-white/80 scroll-reveal">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 scroll-reveal">Calculator</h3>
+                        <p class="text-gray-600 mb-4 scroll-reveal">
+                            A simple and interactive calculator built with HTML, CSS, and JavaScript. It performs basic
+                            arithmetic operations with a clean user interface and responsive design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 scroll-reveal">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm scroll-reveal">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm scroll-reveal">CSS</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm scroll-reveal">JavaScript</span>
+                            <!-- <span
+                            class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm scroll-reveal">Tailwind</span> -->
+                        </div>
+                        <a href="https://phenomenal-platypus-a7d8a2.netlify.app/"
+                            class="inline-flex items-center text-primary hover:text-blue-600 transition-colors duration-300 scroll-reveal"
+                            target="_blank">
+                            <i class="fas fa-external-link-alt mr-2 scroll-reveal"></i>
+                            View Live Demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 4: Form -->
+                <div
+                    class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden scroll-reveal">
+                    <div
+                        class="h-48 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center scroll-reveal">
+                        <img src="files/Screenshot 2025-09-02 161240.png" alt=""
+                            class="fas fa-cloud-sun text-6xl text-white/80 scroll-reveal">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 scroll-reveal">Login Form</h3>
+                        <p class="text-gray-600 mb-4 scroll-reveal">
+                            A modern login form with a clean UI, responsive design, and smooth input validations built
+                            using HTML, CSS, and JavaScript
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 scroll-reveal">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm scroll-reveal">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm scroll-reveal">CSS</span>
+                            <!-- <span
+                            class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm scroll-reveal">JavaScript</span>
+                            <span
+                            class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm scroll-reveal">Tailwind</span> -->
+                        </div>
+                        <a href="https://dawoodweb.netlify.app/"
+                            class="inline-flex items-center text-primary hover:text-blue-600 transition-colors duration-300 scroll-reveal"
+                            target="_blank">
+                            <i class="fas fa-external-link-alt mr-2 scroll-reveal"></i>
+                            View Live Demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 5: to do list -->
+                <div
+                    class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden scroll-reveal">
+                    <div
+                        class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center scroll-reveal">
+                        <img src="files/Screenshot 2025-09-02 170810.png" alt=""
+                            class="fas fa-shopping-cart text-6xl text-white/80 scroll-reveal">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 scroll-reveal">To Do List</h3>
+                        <p class="text-gray-600 mb-4 scroll-reveal">
+                            A simple and responsive to-do list app built with HTML, CSS, and JavaScript, allowing users
+                            to add, manage, and delete tasks easily.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 scroll-reveal">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm scroll-reveal">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm scroll-reveal">React</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm scroll-reveal">JavaScript</span>
+                        </div>
+                        <a href="https://super-lokum-fb637b.netlify.app/"
+                            class="inline-flex items-center text-primary hover:text-blue-600 transition-colors duration-300 scroll-reveal"
+                            target="_blank">
+                            <i class="fas fa-external-link-alt mr-2 scroll-reveal"></i>
+                            View Live Demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 5: E-commerce Landing Page -->
+                <div
+                    class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden scroll-reveal">
+                    <div
+                        class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center scroll-reveal">
+                        <img src="files/Screenshot 2025-09-02 165502.png" alt=""
+                            class="fas fa-shopping-cart text-6xl text-white/80 scroll-reveal">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 scroll-reveal">E-commerce Landing Page</h3>
+                        <p class="text-gray-600 mb-4 scroll-reveal">
+                            Modern e-commerce landing page with interactive product cards, smooth scrolling,
+                            and responsive design optimized for all devices.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 scroll-reveal">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm scroll-reveal">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm scroll-reveal">Tailwind
+                                CSS</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm scroll-reveal">JavaScript</span>
+                        </div>
+                        <a href="https://stalwart-bavarois-d7c617.netlify.app/"
+                            class="inline-flex items-center text-primary hover:text-blue-600 transition-colors duration-300 scroll-reveal"
+                            target="_blank">
+                            <i class="fas fa-external-link-alt mr-2 scroll-reveal"></i>
+                            View Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Projects Button -->
+            <!-- <div class="text-center mt-12 scroll-reveal">
+                <a href="#contact"
+                    class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl scroll-reveal">
+                    <i class="fas fa-folder-open mr-2 scroll-reveal"></i>
+                    View All Projects
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6 scroll-reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 scroll-reveal">
+                    My <span class="text-primary">Experience</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto scroll-reveal">
+                <!-- Experience Timeline -->
+                <div class="relative scroll-reveal">
+                    <!-- Timeline Line -->
+                    <div
+                        class="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary to-secondary scroll-reveal">
+                    </div>
+
+                    <!-- Experience Item 1 -->
+                    <div class="relative flex items-center mb-12 scroll-reveal">
+                        <div
+                            class="absolute left-3 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg scroll-reveal">
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pr-8 scroll-reveal">
+                            <div class="bg-white p-6 rounded-xl shadow-lg scroll-reveal">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2 scroll-reveal">Freelance Canva
+                                    Designer</h3>
+                                <p class="text-primary font-medium mb-2 scroll-reveal">2023 - Present</p>
+                                <p class="text-gray-600 mb-4 scroll-reveal">
+                                    Provided professional design services to clients worldwide, creating engaging visual
+                                    content
+                                    including social media graphics, logos, and marketing materials.
+                                </p>
+                                <ul class="text-gray-600 space-y-1 scroll-reveal">
+                                    <li>• Completed 50+ design projects</li>
+                                    <li>• Maintained 5-star client rating</li>
+                                    <li>• Developed strong design principles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2 -->
+                    <div class="relative flex items-center mb-12 scroll-reveal">
+                        <div
+                            class="absolute left-3 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-secondary rounded-full border-4 border-white shadow-lg scroll-reveal">
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:ml-1/2 md:pl-8 scroll-reveal">
+                            <div class="bg-white p-6 rounded-xl shadow-lg scroll-reveal">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2 scroll-reveal">Frontend Development
+                                    Projects</h3>
+                                <p class="text-secondary font-medium mb-2 scroll-reveal">2023 - Present</p>
+                                <p class="text-gray-600 mb-4 scroll-reveal">
+                                    Built multiple frontend projects to enhance skills and create a strong portfolio,
+                                    focusing on modern web technologies and responsive design.
+                                </p>
+                                <ul class="text-gray-600 space-y-1 scroll-reveal">
+                                    <li>• Portfolio websites</li>
+                                    <li>• E-commerce landing pages</li>
+                                    <li>• Interactive web applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 3 -->
+                    <div class="relative flex items-center scroll-reveal">
+                        <div
+                            class="absolute left-3 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg scroll-reveal">
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pr-8 scroll-reveal">
+                            <div class="bg-white p-6 rounded-xl shadow-lg scroll-reveal">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2 scroll-reveal">Computer Science
+                                    Student</h3>
+                                <p class="text-accent font-medium mb-2 scroll-reveal">2022 - Present</p>
+                                <p class="text-gray-600 mb-4 scroll-reveal">
+                                    Currently pursuing computer science education while building practical skills
+                                    through hands-on projects and continuous learning.
+                                </p>
+                                <ul class="text-gray-600 space-y-1 scroll-reveal">
+                                    <li>• Strong academic foundation</li>
+                                    <li>• Continuous skill development</li>
+                                    <li>• Active in coding communities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Goals Section -->
+    <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6 scroll-reveal">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 scroll-reveal">
+                    Future <span class="text-primary scroll-reveal">Goals</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto scroll-reveal">
+                    My vision for the future and the goals I'm working towards
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto scroll-reveal">
+                <!-- Goal 1 -->
+                <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-xl border border-primary/10">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl scroll-reveal"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 scroll-reveal">Master Full Stack Development
+                    </h3>
+                    <p class="text-gray-600 mb-4 scroll-reveal">
+                        Expand my skills to become a full-stack developer by mastering backend technologies
+                        like React, Node.js, and MongoDB to build complete web applications.
+                    </p>
+                    <ul class="text-gray-600 space-y-2 scroll-reveal">
+                        <li class="flex items-center scroll-reveal">
+                            <i class="fas fa-check text-primary mr-2 scroll-reveal"></i>
+                            Advanced React development
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-2 scroll-reveal"></i>
+                            Node.js & Express.js
+                        </li>
+                        <li class="flex items-center scroll-reveal">
+                            <i class="fas fa-check text-primary mr-2 scroll-reveal"></i>
+                            MongoDB & Database design
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Goal 2 -->
+                <div class="bg-gradient-to-br from-secondary/5 to-accent/5 p-8 rounded-xl border border-secondary/10">
+                    <div
+                        class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 scroll-reveal">
+                        <i class="fas fa-briefcase text-white text-2xl scroll-reveal"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 scroll-reveal">Real-World Projects & Remote
+                        Work</h3>
+                    <p class="text-gray-600 mb-4">
+                        Work on challenging real-world projects and secure remote job opportunities
+                        to gain professional experience and contribute to meaningful products.
+                    </p>
+                    <ul class="text-gray-600 space-y-2 scroll-reveal">
+                        <li class="flex items-center scroll-reveal">
+                            <i class="fas fa-check text-secondary mr-2 scroll-reveal"></i>
+                            Freelance & contract work
+                        </li>
+                        <li class="flex items-center scroll-reveal">
+                            <i class="fas fa-check text-secondary mr-2 scroll-reveal"></i>
+                            Remote job opportunities
+                        </li>
+                        <li class="flex items-center scroll-reveal">
+                            <i class="fas fa-check text-secondary mr-2 scroll-reveal"></i>
+                            Open source contributions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16 scroll-reveal">
+                <p class="text-lg text-gray-600 mb-6 scroll-reveal">
+                    Want to be part of my journey? Let's connect and create something amazing together!
+                </p>
+                <a href="#contact"
+                    class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl scroll-reveal">
+                    <i class="fas fa-rocket mr-2 scroll-reveal"></i>
+                    Let's Work Together
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white scroll-reveal">
+        <div class="container mx-auto px-6 scroll-reveal">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 scroll-reveal">
+                    Get In <span class="text-primary scroll-reveal">Touch</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"
+                    scroll-reveal></div>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto scroll-reveal">
+                    Ready to start your next project? Let's discuss how we can work together to bring your ideas to
+                    life.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto scroll-reveal">
+                <!-- Contact Info -->
+                <div class="space-y-8 scroll-reveal">
+                    <h3 class="text-2xl font-semibold mb-6 scroll-reveal">Let's Connect</h3>
+
+                    <div class="flex items-center space-x-4 scroll-reveal">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center scroll-reveal">
+                            <i class="fas fa-envelope text-white scroll-reveal"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold scroll-reveal">Email</h4>
+                            <a href="mailto:buttdaud94@gmail.com"
+                                class="text-gray-300 hover:text-primary transition-colors duration-300 scroll-reveal"
+                                scroll-reveal>
+                                buttdaud94@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 scroll-reveal">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center scroll-reveal">
+                            <i class="fas fa-map-marker-alt text-white scroll-reveal"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold scroll-reveal">Location</h4>
+                            <p class="text-gray-300 scroll-reveal">Lahore, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 scroll-reveal">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center scroll-reveal">
+                            <i class="fas fa-clock text-white scroll-reveal"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Response Time</h4>
+                            <p class="text-gray-300">Within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="pt-8 scroll-reveal">
+                        <h4 class="font-semibold mb-4 scroll-reveal">Follow Me</h4>
+                        <div class="flex space-x-4 scroll-reveal">
+                            <!-- <a href="#"
+                                class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 scroll-reveal">
+                                <i class="fab fa-github text-white scroll-reveal"></i>
+                            </a> -->
+                            <a href="https://www.linkedin.com/in/dawood-butt-413192282"
+                                class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 scroll-reveal"
+                                target="_blank">
+                                <i class="fab fa-linkedin text-white scroll-reveal"></i>
+                            </a>
+                            <!-- <a href="#"
+                                class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 scroll-reveal">
+                                <i class="fab fa-twitter text-white scroll-reveal"></i> -->
+                            </a>
+                            <a href="https://www.instagram.com/dawoodbutt111?utm_source=qr"
+                                class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 scroll-reveal"
+                                target="_blank">
+                                <i class="fab fa-instagram text-white scroll-reveal"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 scroll-reveal">
+                    <h3 class="text-2xl font-semibold mb-6 scroll-reveal">Send Message</h3>
+                    <form id="contact-form" class="space-y-6 scroll-reveal">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2 scroll-reveal">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50 transition-all duration-300 scroll-reveal"
+                                placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2 scroll-reveal">Your Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50 transition-all duration-300 scroll-reveal"
+                                placeholder="Enter your email">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2 scroll-reveal">Your
+                                Message</label>
+                            <textarea id="message" name="message" required
+                                class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50 transition-all duration-300 resize-none scroll-reveal"
+                                placeholder="Send Your Message:"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl scroll-reveal">
+                            <i class="fas fa-paper-plane mr-2 scroll-reveal"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800 scroll-reveal">
+        <div class="container mx-auto px-6 text-center scroll-reveal">
+            <p class="text-gray-400 scroll-reveal">
+                © 2024 Dawood Butt. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target); // once revealed, stop observing
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("jYposn12HTQrusBmF");
+        })();
+
+        // Form submit event
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // form reload hone se roke
+
+            emailjs.sendForm('service_mr5k94h', 'template_ti6csyt', this)
+                .then(function () {
+                    ("Message sent successfully!");
+                    document.getElementById("contact-form").reset(); // form clear kare
+                })
+                .catch(function (error) {
+                    ("Error: " + JSON.stringify(error));
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>
