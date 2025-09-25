@@ -376,6 +376,8 @@ window.addEventListener('load', function() {
 window.addEventListener('error', function(e) {
     console.error('JavaScript error:', e.error);
 });
+const currentYear = new Date().getFullYear()
+document.getElementById("currentYear").textContent = currentYear
 
 // Console message for developers
 console.log(`
