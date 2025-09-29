@@ -398,3 +398,47 @@ console.log(`
     Interested in the code? Check out the source!
     Contact: buttdaud94@gmail.com
 `);
+
+function initMobileMenu() {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuIcon = mobileMenuBtn.querySelector('i');
+
+  mobileMenuBtn.addEventListener('click', function () {
+    const isOpen = mobileMenu.classList.contains('show');
+
+    if (isOpen) {
+      // Closing animation
+      mobileMenu.classList.remove('show');
+      mobileMenuIcon.classList.remove('fa-times');
+      mobileMenuIcon.classList.add('fa-bars');
+
+      // wait animation end then hide
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 400);
+    } else {
+      // Opening animation
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => {
+        mobileMenu.classList.add('show');
+      }, 10);
+
+      mobileMenuIcon.classList.remove('fa-bars');
+      mobileMenuIcon.classList.add('fa-times');
+    }
+  });
+
+  // Close on link click
+  const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.remove('show');
+      mobileMenuIcon.classList.remove('fa-times');
+      mobileMenuIcon.classList.add('fa-bars');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 400);
+    });
+  });
+}
